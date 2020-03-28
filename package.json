@@ -1,0 +1,36 @@
+{
+  "name": "awesome-storage",
+  "version": "1.0.0",
+  "description": "A Storage utility to work with Local Storage and Cookies",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": ["typescript","storage","localStorage","cookie","browser"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "prettier": "^2.0.2",
+    "ts-jest": "^22.4.6",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@jest/core": "^24.8.0",
+    "@types/jest": "^25.1.4"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
