@@ -15,8 +15,12 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlucidone/awesome-storage"
+  },
   "keywords": ["typescript","storage","localStorage","cookie","browser"],
-  "author": "",
+  "author": "Ravi Mishra",
   "license": "ISC",
   "devDependencies": {
     "jest": "^23.6.0",
