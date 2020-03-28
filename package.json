@@ -1,6 +1,6 @@
 {
   "name": "awesome-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Storage utility to work with Local Storage and Cookies",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,7 +19,13 @@
     "type": "git",
     "url": "git+https://github.com/dlucidone/awesome-storage"
   },
-  "keywords": ["typescript","storage","localStorage","cookie","browser"],
+  "keywords": [
+    "typescript",
+    "storage",
+    "localStorage",
+    "cookie",
+    "browser"
+  ],
   "author": "Ravi Mishra",
   "license": "ISC",
   "devDependencies": {
@@ -28,9 +34,7 @@
     "ts-jest": "^22.4.6",
     "tslint": "^6.1.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.8.3"
-  },
-  "dependencies": {
+    "typescript": "^3.8.3",
     "@jest/core": "^24.8.0",
     "@types/jest": "^25.1.4"
   },
