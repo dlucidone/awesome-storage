@@ -1,4 +1,5 @@
 import * as localStorage from './localStorage';
+import * as sessionStorage from './sessionStorage';
 import * as cookieStorage from './cookie';
 declare var Storage: any;
 
@@ -16,4 +17,4 @@ export default function isStorageAvailable() {
     }
 }
 
-export { localStorage, cookieStorage };
+export { localStorage, cookieStorage, sessionStorage };

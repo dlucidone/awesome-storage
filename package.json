@@ -1,6 +1,6 @@
 {
   "name": "awesome-storage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Storage utility to work with Local Storage and Cookies",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

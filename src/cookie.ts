@@ -6,7 +6,7 @@ declare var document: any;
  * @function
  * @return {string} data | undefined
  */
-const getCookie =  (name: string) =>{
+const getCookie = (name: string) => {
     function escape(s: string) {
         return s.replace(/([.*+?\^${}()|\[\]\/\\])/g, '\\$1');
     }
@@ -15,15 +15,27 @@ const getCookie =  (name: string) =>{
 };
 
 /**
+ * Set cookie data by name
+ *
+ * @function
+ * @return {string} data | undefined
+ */
+const setCookie = (name: string, value: string, days: number) => {
+    let date = new Date;
+    date.setTime(date.getTime() + 24 * 60 * 60 * 1000 * days);
+    return document.cookie = name + "=" + value + ";path=/;expires=" + date.toUTCString();
+}
+
+/**
  * Clear all the cookie storage data - clean sweep
  *
  * @function
  * @return {undefined} undefined
  */
-const clearCookieStorageData =  ()=> {
+const clearCookieStorageData = () => {
     document.cookie.split(';').forEach(function (c: string) {
         document.cookie = c.replace(/^ +/, '').replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
     });
 };
 
-export { getCookie, clearCookieStorageData };
+export { getCookie, setCookie, clearCookieStorageData };

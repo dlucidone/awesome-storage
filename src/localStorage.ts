@@ -23,6 +23,16 @@ const setLocalStorageData = (key: string, value: string) => {
 };
 
 /**
+ * Remove the data in local storage by key
+ *
+ * @function
+ * @return {undefined} undefined
+ */
+const removeLocalStorageDataByKey = (key: string) => {
+  window.localStorage.removeItem(key);
+};
+
+/**
  * Clear all the local storage data - clean sweep
  *
  * @function
@@ -32,4 +42,4 @@ const clearLocalStorageData = () => {
   window.localStorage.clear();
 };
 
-export { getLocalStorageData, setLocalStorageData, clearLocalStorageData };
+export { getLocalStorageData, setLocalStorageData, removeLocalStorageDataByKey, clearLocalStorageData };
