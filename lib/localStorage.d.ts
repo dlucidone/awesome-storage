@@ -16,10 +16,17 @@ declare const getLocalStorageData: (key: string) => any;
  */
 declare const setLocalStorageData: (key: string, value: string) => any;
 /**
+ * Remove the data in local storage by key
+ *
+ * @function
+ * @return {undefined} undefined
+ */
+declare const removeLocalStorageDataByKey: (key: string) => void;
+/**
  * Clear all the local storage data - clean sweep
  *
  * @function
  * @return {undefined} undefined
  */
 declare const clearLocalStorageData: () => void;
-export { getLocalStorageData, setLocalStorageData, clearLocalStorageData };
+export { getLocalStorageData, setLocalStorageData, removeLocalStorageDataByKey, clearLocalStorageData };

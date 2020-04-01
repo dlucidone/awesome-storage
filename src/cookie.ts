@@ -21,7 +21,7 @@ const getCookie = (name: string) => {
  * @return {string} data | undefined
  */
 const setCookie = (name: string, value: string, days: number) => {
-    let date = new Date;
+    const date = new Date;
     date.setTime(date.getTime() + 24 * 60 * 60 * 1000 * days);
     return document.cookie = name + "=" + value + ";path=/;expires=" + date.toUTCString();
 }
